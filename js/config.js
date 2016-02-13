@@ -14,3 +14,11 @@ angular.module('app.controllers', [
 	'app.controller.teamPerformanceCtrl',
 	'app.controller.timeOffCtrl'
 ]);
+
+angular.module('app.factories', [
+	'app.factory.loginFactory'
+]);
+
+angular.module('app.services', [
+	'app.service.loginService'
+]);

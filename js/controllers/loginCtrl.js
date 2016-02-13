@@ -1,7 +1,10 @@
 angular.module('app.controller.loginCtrl', [])
-	.controller('loginCtrl', ['$scope', '$state', function($scope, $state) {
+	.controller('loginCtrl', ['$scope', '$state', 'store', 'loginFactory', function($scope, $state, store, loginFactory) {
 	
-	$scope.login = function(uname, pwd) {
+	$scope.user = {};
+	
+	$scope.login = function() {
+		var response = loginFactory.userLogin($scope.user);
 		$state.go('/home');
 	}
 }]);
