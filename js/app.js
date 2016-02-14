@@ -11,7 +11,7 @@ angular.module('app', [
 angular.module('app.configs', ['ui.router'])
 	.config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
     
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/home');
 	
 	jwtInterceptorProvider.tokenGetter = function(store) {
 		return store.get('jwt');
