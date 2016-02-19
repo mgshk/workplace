@@ -11,7 +11,7 @@ angular.module('app', [
 angular.module('app.configs', ['ui.router'])
 	.config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
     
-    $urlRouterProvider.otherwise('/home');
+    $urlRouterProvider.otherwise('/login');
 	
 	jwtInterceptorProvider.tokenGetter = function(store) {
 		return store.get('jwt');
@@ -46,7 +46,7 @@ angular.module('app.configs', ['ui.router'])
 			templateUrl: 'templates/dashboards.html',
 			controller: 'dashboardCtrl',
 			data: {
-			  requiresLogin: true
+			  requiresLogin: false
 			}
 		}).state('/directory', {
 			url: '/directory',
