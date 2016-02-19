@@ -11,6 +11,10 @@ angular.module('app', [
 angular.module('app.configs', ['ui.router'])
 	.config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
     
+
+	// $locationProvider.html5Mode(true);
+ //    $locationProvider.hashPrefix('!');
+
     $urlRouterProvider.otherwise('/login');
 	
 	jwtInterceptorProvider.tokenGetter = function(store) {
@@ -116,6 +120,8 @@ angular.module('app.configs', ['ui.router'])
 			  requiresLogin: true
 			}
 		});
+
+
 }).run(function($rootScope, $state, store, jwtHelper) {
 	$rootScope.$on('$stateChangeStart', function(e, to) {
 		

@@ -9,10 +9,10 @@
     <div class="panel panel-default">
     
       <div class="panel-body">
-        <form role="form" name="userForm">
+        
           
             <div class="row">
-            	<div class="center-block"> <h3>Workday</h3> </div>
+            	<div class="center-block"> <h3>Login To Product</h3> </div>
             	<hr class="logn">
               <div class="col-sm-12 col-md-10  col-md-offset-1 ">
 
@@ -20,36 +20,39 @@
                     <strong>Username!</strong> or <strong>Password</strong> is Incorrect.
                 </div>
 
+                <form role="form" name="userForm" ng-submit="login()" novalidate>
+
                 <div class="form-group">
                 <label>Email:</label>
-                  <div class="input-group">
+                  <div class="input-group" ng-class="{ 'has-error' : userForm.useremail.$invalid && !userForm.useremail.$pristine }">
                    <span class="input-group-addon"> <i class="glyphicon glyphicon-user"></i> </span>
-                    <input class="form-control loginput" placeholder="Email" name="useremail" ng-model="user.useremail" type="email" autofocus>
+                    <input class="form-control loginput" placeholder="Email" name="useremail" ng-model="user.useremail" type="email" required>
                   </div>
-                 <!--  <div ng-messages="userForm.useremail.$error">
-                  <div ng-message="required">This field is required</div>
-                  <div ng-message="email">Your email address is invalid</div>
-                  </div> -->
+                <p ng-if="userForm.useremail.$invalid && !userForm.useremail.$pristine" class="help-block">Enter a valid email.</p>
                 </div>
+
                 <div class="form-group">
                  <label>Password:</label>
-                  <div class="input-group">
+                  <div class="input-group" ng-class="{ 'has-error' : userForm.password.$invalid && !userForm.password.$pristine }">
                    <span class="input-group-addon"> <i class="glyphicon glyphicon-lock"></i> </span>
-                    <input class="form-control loginput" placeholder="Password" name="password" ng-model="user.password" type="password" data-error="please enter your password">
+                    <input class="form-control loginput" placeholder="Password" name="password" ng-model="user.password" type="password" required>
                   </div>
-                  <!-- <div ng-messages="userForm.password.$error">
-                  <div ng-message="required">This field is required</div>
-                  </div> -->
+                  <p ng-if="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Password is required.</p>
                 </div>
                
-                <div class="form-group">
-                  <input type="submit" class="btn btn-success log" value="Log In" ng-click="login()">
-                </div>
+                
+                  <button type="submit" ng-disabled="userForm.$invalid" class="btn btn-success log" >Log In</button>
+
+                  <button type="button" class="btn btn-success log1" >Sign up</button>
+
+                <a href="#" class="forgot">Forgot Password?</a>
                
+               </form>
+
               </div>
             </div>
 
-        </form>
+        
     
       </div>
     </div>

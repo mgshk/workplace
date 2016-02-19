@@ -1,5 +1,5 @@
 angular.module('app.controller.loginCtrl', [])
-	.controller('loginCtrl', ['$scope', '$state', 'store', 'loginFactory', function($scope, $state, store, loginFactory) {
+	.controller('loginCtrl', ['$scope', '$timeout', '$state', 'store', 'loginFactory', function($scope, $state, store, loginFactory, $timeout) {
 	
 	$scope.user = {};
 	
@@ -13,8 +13,17 @@ angular.module('app.controller.loginCtrl', [])
 			$state.go('/dashboards');
 		}else{
 			$scope.showLogin = true;
+			$scope.user = {};
+			$scope.userForm.$setPristine();
+            $scope.userForm.$setUntouched();
+            $timeout(hideError, 4000);
 		}
 		//var response = loginFactory.userLogin($scope.user);
 		//$state.go('/dashboards');
 	}
+
+	function hideError(){
+		$scope.showLogin = false;
+	}
+
 }]);

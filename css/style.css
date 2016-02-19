@@ -93,8 +93,9 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
 }
 .home ul{margin:0;padding: 0;list-style: none;text-align: center;}
 .home ul li{display: inline-block;margin: 10px 30px;cursor: pointer;vertical-align: top;}
-.home ul li img{display: block;/*transition: width 2s, height 2s;*/}
-/*.home ul li img:hover{width:160px;height: 160px;}*/
+.home ul li img{display: block;-webkit-transition: all 0.7s ease;transition: all 0.7s ease;}
+.home ul li img:hover{-webkit-transform:scale(1.2);
+transform:scale(1.2);}
 .home ul li span{color: #888;font-size: 16px;text-transform: capitalize;}
 .userinfo{float: right;}
 .userinfo span{color: #fff;font-size: 16px;margin-right: 10px;font-weight: 600;}
@@ -106,3 +107,8 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
     margin-top: 10px !important;
 }
 .fa-cog{float: right;color: #999;}
+.logo{text-align: center;}
+.logo a{color: #fff;font-size: 20px;}
+.help-block {color: #A94402 !important;font-size: 17px !important;font-weight: 800;}
+.log1 {margin-top: 10px;margin-right: 10px;}
+.forgot{color: #fff;font-size: 16px;}
