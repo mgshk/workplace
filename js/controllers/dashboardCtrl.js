@@ -1,4 +1,4 @@
-angular.module('app.controller.dashboardsCtrl', [])
-	.controller('dashboardsCtrl', function($scope) {
+angular.module('app.controller.dashboardCtrl', [])
+	.controller('dashboardCtrl', function($scope) {
 
 });

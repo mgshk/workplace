@@ -1,5 +1,5 @@
 angular.module('app.controller.loginCtrl', [])
-	.controller('loginCtrl', ['$scope', '$timeout', '$state', 'store', 'loginFactory', function($scope, $state, store, loginFactory, $timeout) {
+	.controller('loginCtrl', ['$scope', '$state', 'store', 'loginFactory', '$timeout', function($scope, $state, store, loginFactory, $timeout) {
 	
 	$scope.user = {};
 	
@@ -10,7 +10,7 @@ angular.module('app.controller.loginCtrl', [])
 		}
 		$scope.showLogin = false;
 		if($scope.user.useremail === mockUser.email && $scope.user.password === mockUser.password){
-			$state.go('/dashboards');
+			$state.go('/home');
 		}else{
 			$scope.showLogin = true;
 			$scope.user = {};

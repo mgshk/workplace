@@ -50,7 +50,7 @@ angular.module('app.configs', ['ui.router'])
 			templateUrl: 'templates/dashboards.html',
 			controller: 'dashboardCtrl',
 			data: {
-			  requiresLogin: false
+			  requiresLogin: true
 			}
 		}).state('/directory', {
 			url: '/directory',
