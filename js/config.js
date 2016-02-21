@@ -1,6 +1,6 @@
 angular.module('app.controllers', [
 	'app.controller.benefitsCtrl',
-	'app.controller.birthdaysCtrl',
+	'app.controller.birthdayCtrl',
 	'app.controller.compensationCtrl',
 	'app.controller.dashboardCtrl',
 	'app.controller.directoryCtrl',

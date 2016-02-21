@@ -1,6 +1,5 @@
 angular.module('app', [
 	'ui.router',
-	'angular-jwt',
 	'app.configs',
 	'app.controllers',
 	'app.factories',
@@ -9,21 +8,11 @@ angular.module('app', [
 ]);
 
 angular.module('app.configs', ['ui.router'])
-	.config(function($stateProvider, $urlRouterProvider, jwtInterceptorProvider, $httpProvider) {
+	.config(function($stateProvider, $urlRouterProvider, $httpProvider) {
     
+	$urlRouterProvider.otherwise('/login');
 
-	// $locationProvider.html5Mode(true);
- //    $locationProvider.hashPrefix('!');
-
-    $urlRouterProvider.otherwise('/login');
-	
-	jwtInterceptorProvider.tokenGetter = function(store) {
-		return store.get('jwt');
-	}
-
-	$httpProvider.interceptors.push('jwtInterceptor');
-    
-    $stateProvider
+	$stateProvider
 		.state('/benefits', {
 			url: '/benefits',
 			templateUrl: 'templates/benefits.html',
@@ -31,10 +20,10 @@ angular.module('app.configs', ['ui.router'])
 			data: {
 			  requiresLogin: true
 			}
-		}).state('/birthdays', {
-			url: '/birthdays',
-			templateUrl: 'templates/birthdays.html',
-			controller: 'birthdaysCtrl',
+		}).state('/birthday', {
+			url: '/birthday',
+			templateUrl: 'templates/birthday.html',
+			controller: 'birthdayCtrl',
 			data: {
 			  requiresLogin: true
 			}
@@ -78,7 +67,7 @@ angular.module('app.configs', ['ui.router'])
 			templateUrl: 'templates/home.html',
 			controller: 'homeCtrl',
 			data: {
-			  requiresLogin: false
+			  requiresLogin: true
 			}
 		}).state('/login', {
 			url: '/login',
@@ -120,13 +109,14 @@ angular.module('app.configs', ['ui.router'])
 			  requiresLogin: true
 			}
 		});
-
-
-}).run(function($rootScope, $state, store, jwtHelper) {
+		
+		//$locationProvider.html5Mode(true);
+		
+}).run(function($rootScope, $state, store, localStorage) {
 	$rootScope.$on('$stateChangeStart', function(e, to) {
 		
 		if (to.data && to.data.requiresLogin) {
-			if (!store.get('jwt') || jwtHelper.isTokenExpired(store.get('jwt'))) {
+			if (!store.get('id_token')) {
 				e.preventDefault();
 				$state.go('/login');
 			}
