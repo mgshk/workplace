@@ -18,6 +18,10 @@ angular.module('app.controller.loginCtrl', [])
 			}
 		});
 	}
+	
+	$scope.signup = function() {
+		$state.go('/signup');
+	}
 
 	function hideError(){
 		$scope.showLogin = false;

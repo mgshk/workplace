@@ -73,6 +73,14 @@ angular.module('app.configs', ['ui.router'])
 			url: '/login',
 			templateUrl: 'templates/login.html',
 			controller: 'loginCtrl'
+		}).state('/forget_password', {
+			url: '/forget_password',
+			templateUrl: 'templates/forget_password.html',
+			controller: 'forgetPasswordCtrl'
+		}).state('/signup', {
+			url: '/signup',
+			templateUrl: 'templates/signup.html',
+			controller: 'signUpCtrl'
 		}).state('/my_team', {
 			url: '/my_team',
 			templateUrl: 'templates/my_team.html',

@@ -8,6 +8,8 @@ angular.module('app.controllers', [
 	'app.controller.favoritiesCtrl',
 	'app.controller.homeCtrl',
 	'app.controller.loginCtrl',
+	'app.controller.forgetPasswordCtrl',
+	'app.controller.signUpCtrl',
 	'app.controller.myTeamCtrl',
 	'app.controller.payCtrl',
 	'app.controller.personalInformationCtrl',
