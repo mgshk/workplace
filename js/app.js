@@ -117,17 +117,14 @@ angular.module('app.configs', ['ui.router'])
 			  requiresLogin: true
 			}
 		});
-		
-		//$locationProvider.html5Mode(true);
-		
 }).run(function($rootScope, $state, store, localStorage) {
 	$rootScope.$on('$stateChangeStart', function(e, to) {
 		
-		if (to.data && to.data.requiresLogin) {
-			if (!store.get('id_token')) {
-				e.preventDefault();
-				$state.go('/login');
-			}
-		}
+		//if (to.data && to.data.requiresLogin) {
+		//	if (!store.get('userId')) {
+		//		e.preventDefault();
+		//		$state.go('/login');
+		//	}
+		//}
 	});
 });
