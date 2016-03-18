@@ -57,7 +57,8 @@ hr.logn {
     margin: 5px;
 }
 /* login */
-
+.logn1{width: 97%;float: left;}
+.forgot1{margin-left: 10px;font-size: 17px !important;}
 /* dashborads */
 header{width:100%;background: #0067aa;float: left;padding: 10px 10px;}
 .logo a img{display: block;margin: auto;}
@@ -95,8 +96,8 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
 .home ul{margin:0;padding: 0;list-style: none;text-align: center;}
 .home ul li{display: inline-block;margin: 10px 30px;cursor: pointer;vertical-align: top;}
 .home ul li img{display: block;-webkit-transition: all 0.7s ease;transition: all 0.7s ease;}
-.home ul li img:hover{-webkit-transform:scale(1.2);
-transform:scale(1.2);}
+.home ul li img:hover{-webkit-transform:scale(1.1);
+transform:scale(1.1);}
 .home ul li span{color: #888;font-size: 16px;text-transform: capitalize;}
 .userinfo{float: right;}
 .userinfo span{color: #fff;font-size: 16px;margin-left: 10px;font-weight: 600;}

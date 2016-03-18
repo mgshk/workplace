@@ -25,11 +25,17 @@
 								</div>
 								<p ng-if="userForm.password.$invalid && !userForm.password.$pristine" class="help-block">Password is required.</p>
 							</div>
-							<button type="submit" ng-disabled="userForm.$invalid" class="btn btn-success log">Log In</button>
-							<a ui-sref="/signup">
-								<button type="button" class="btn btn-success log1">Sign up</button>
-							</a>
+							<div class="form-group">
 							<a ui-sref="/forget_password" class="forgot">Forgot Password?</a>
+							<button type="submit" ng-disabled="userForm.$invalid" class="btn btn-success">Log In
+							</button>
+							</div>
+							
+							<hr class="logn1">
+							
+								<span class="forgot">Don't have account?</span><a href="#" class="forgot forgot1" ui-sref="/signup">Sign up!</a>
+							
+							
 					   </form>
 					</div>
 				</div>
