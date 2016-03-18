@@ -1,46 +1,47 @@
 .login {
     height: 100%;width:100%;
-   float: left;	background: #045404;
-	background-size: cover;
-	color: #EFEFEF;
+   float: left;
+    background-size: cover;
+    color: #EFEFEF;
 }
 .login h3{text-align: center;font-weight: 600;}
 body{margin: 0;padding: 0;border: none;background: #f2f4f3 !important;font-family: 'Roboto Condensed', sans-serif !important;}
 /* login */
 [role="login"] .container {
-	margin-top: 100px
+    margin-top: 100px
 }
 [role="login"] .btn-success {
-	background: #76B831;
-	border: 1px solid #679F2C;
-	float: right;font-size: 16px;
+    background: #76B831;
+    border: 1px solid #679F2C;
+    float: right;font-size: 16px;
 }
 [role="login"] label {
-	font-weight: normal;
-	color: #FFF;font-size: 16px;
+    font-weight: normal;
+    color: #FFF;font-size: 16px;
 }
 .panel-heading {
-	padding: 5px 15px;
+    padding: 5px 15px;
 }
+.pb{background: #307230;}
 .form-inline {
-	margin: 5px
+    margin: 5px
 }
 .panel-footer {
-	padding: 1px 15px;
-	color: #A0A0A0;
+    padding: 1px 15px;
+    color: #A0A0A0;
 }
 hr {
-	border: 0;
-	height: 1px;
-	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
-	margin: 5px
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #FFF, rgba(0, 0, 0, 0));
+    margin: 5px
 }
 .profile-img {
-	margin: 0 auto 10px;
-	display: block;
+    margin: 0 auto 10px;
+    display: block;
 }
 .panel-default {
-	margin-top: 50px;
+    margin-top: 50px;
     opacity: .9 !important;
     -webkit-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45) !important;
     -moz-box-shadow: 0px 7px 24px 1px rgba(0,0,0,0.45) !important;
@@ -60,7 +61,7 @@ hr.logn {
 /* dashborads */
 header{width:100%;background: #01a4e7;float: left;padding: 10px 10px;}
 .logo a img{display: block;margin: auto;}
-.menubar{display: inline-block;}
+.menubar{display: inline-block;margin-right: 5px;}
 .fa-bars{font-size: 24px !important;}
 .menu{padding: 5px 10px 3px 10px !important;}
 .search {
@@ -87,7 +88,7 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
 .home h3{text-align: center;font-size: 18px;color: #333;font-weight: 700;margin-bottom: 0;}
 /* dashborads */
 @media (min-width: 1200px){
-	.container {
+    .container {
     width: 900px !important;
     }
 }
@@ -98,7 +99,7 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
 transform:scale(1.2);}
 .home ul li span{color: #888;font-size: 16px;text-transform: capitalize;}
 .userinfo{float: right;}
-.userinfo span{color: #fff;font-size: 16px;margin-right: 10px;font-weight: 600;}
+.userinfo span{color: #fff;font-size: 16px;margin-left: 10px;font-weight: 600;}
 .userinfo img{}
 .alert {
     padding: 10px 10px !important;
@@ -112,3 +113,6 @@ transform:scale(1.2);}
 .help-block {color: #A94402 !important;font-size: 17px !important;font-weight: 800;}
 .log1 {margin-top: 10px;margin-right: 10px;}
 .forgot{color: #fff;font-size: 16px;}
+.forgot:hover{color: #fff;}
+.pan{background: #0067aa !important;border-radius: 15px;}
+.pan1{border-radius: 15px !important;}

@@ -39,7 +39,7 @@ angular.module('app.configs', ['ui.router'])
 			templateUrl: 'templates/dashboards.html',
 			controller: 'dashboardCtrl',
 			data: {
-			  requiresLogin: true
+			  requiresLogin: false
 			}
 		}).state('/directory', {
 			url: '/directory',

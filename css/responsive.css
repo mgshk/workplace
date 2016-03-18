@@ -1,0 +1,8 @@
+@media (max-width:767px){
+	.home ul li{margin: 10px 8px;}
+	.home h3{margin: 20px 20px 0 20px;}
+	.nospace{padding: 0 !important;}
+	.search{max-width: 245px;}
+	.logo{padding: 10px 0;}
+	.userinfo {width: 100%;text-align: left;}
+}
