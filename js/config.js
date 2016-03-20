@@ -107,6 +107,22 @@ angular.module('app.configs', ['ui.router'])
 			data: {
 			  requiresLogin: true
 			}
+		})
+		.state('/add_employee', {
+			url: '/add_employee',
+			templateUrl: 'templates/add_employee.html',
+			controller: 'addEmployeeCtrl',
+			data: {
+			  requiresLogin: false
+			}
+		})
+		.state('/view_employees', {
+			url: '/view_employees',
+			templateUrl: 'templates/view_employees.html',
+			controller: 'viewEmployeesCtrl',
+			data: {
+			  requiresLogin: false
+			}
 		});
 }).run(function($rootScope, $state, store, localStorage) {
 	$rootScope.$on('$stateChangeStart', function(e, to) {

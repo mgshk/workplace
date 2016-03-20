@@ -23,7 +23,9 @@ angular.module('app.controllers', [
 	'app.controller.payCtrl',
 	'app.controller.personalInformationCtrl',
 	'app.controller.teamPerformanceCtrl',
-	'app.controller.timeOffCtrl'
+	'app.controller.timeOffCtrl',
+	'app.controller.addEmployeeCtrl',
+	'app.controller.viewEmployeesCtrl'
 ]);
 
 angular.module('app.factories', [

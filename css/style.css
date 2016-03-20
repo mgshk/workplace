@@ -88,11 +88,9 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
 .home{width: 100%;float: left;}
 .home h3{text-align: center;font-size: 18px;color: #333;font-weight: 700;margin-bottom: 0;}
 /* dashborads */
-@media (min-width: 1200px){
-    .container {
-    width: 900px !important;
+    .container-home {
+    max-width: 900px !important;
     }
-}
 .home ul{margin:0;padding: 0;list-style: none;text-align: center;}
 .home ul li{display: inline-block;margin: 10px 30px;cursor: pointer;vertical-align: top;}
 .home ul li img{display: block;-webkit-transition: all 0.7s ease;transition: all 0.7s ease;}
@@ -118,3 +116,5 @@ transform:scale(1.1);}
 .pan{background: #0067aa !important;border-radius: 15px;}
 .pan1{border-radius: 15px !important;}
 .loginbtn{background: #f5a01b !important;}
+.emp-table tr th {background: #f5a01b;font-size: 15px;color: #fff;}
+.emp-table tbody{background: #fff;font-size: 15px;font-weight: 600;}
