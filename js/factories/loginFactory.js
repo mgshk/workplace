@@ -10,7 +10,7 @@ angular.module('app.factory.loginFactory', [])
 	function userLogin (user) {
 		var deferred = $q.defer();
 		loginService.userLogin(user).then(function (resp) {
-			deferred.resolve(resp);
+			deferred.resolve(resp.data);
 		}, function(error) {
 			console.log(error);
 		});

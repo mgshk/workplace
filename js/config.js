@@ -30,7 +30,7 @@ angular.module('app.configs', ['ui.router'])
 			templateUrl: 'templates/dashboards.html',
 			controller: 'dashboardCtrl',
 			data: {
-			  requiresLogin: false
+			  requiresLogin: true
 			}
 		}).state('/directory', {
 			url: '/directory',
@@ -111,11 +111,11 @@ angular.module('app.configs', ['ui.router'])
 }).run(function($rootScope, $state, store, localStorage) {
 	$rootScope.$on('$stateChangeStart', function(e, to) {
 		
-		//if (to.data && to.data.requiresLogin) {
-		//	if (!store.get('userId')) {
-		//		e.preventDefault();
-		//		$state.go('/login');
-		//	}
-		//}
+		if (to.data && to.data.requiresLogin) {
+			if (!store.get('userId')) {
+				e.preventDefault();
+				$state.go('/login');
+			}
+		}
 	});
 });

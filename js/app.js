@@ -27,9 +27,11 @@ angular.module('app.controllers', [
 ]);
 
 angular.module('app.factories', [
-	'app.factory.loginFactory'
+	'app.factory.loginFactory',
+	'app.factory.userFactory'
 ]);
 
 angular.module('app.services', [
-	'app.service.loginService'
+	'app.service.loginService',
+	'app.service.userService'
 ]);
