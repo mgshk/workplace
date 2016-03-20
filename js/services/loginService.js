@@ -2,7 +2,7 @@ angular.module('app.service.loginService', [])
 	.service('loginService', ['$http', function($http) {
 		
 		this.userLogin = function(user) {
-			return $http.post('http://localhost/workday/stubs/login.json', user).then(function (resp) {
+			return $http.post('http://localhost/workplace/stubs/login.json', user).then(function (resp) {
 				return resp;
 			});		
 		}
