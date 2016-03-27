@@ -1,0 +1,73 @@
+<header>
+
+    <div class="col-md-4 col-sm-6 col-xs-12 nospace">
+        <form>
+            <span class="menubar">
+                <a href="#menu">
+                    <button class="btn btn-primary dropdown-toggle menu" type="button">
+                    <i class="fa fa-bars"></i>
+                </button>
+                </a>
+                <nav id="menu">
+                    <ul>
+                        <li><a ui-sref="/add_employee">Add New Employee</a></li>
+                        <li><a ui-sref="/view_employees">View Employees List</a></li>
+                    </ul>
+                </nav>
+            </span>
+        <!-- <input type="text" class="search" placeholder="Search"> -->
+        </form>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12 logo">
+        <a ui-sref="/home">Logo</a>
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12 nospace">
+        <div class="userinfo">
+            <img src="img/user.png" alt="User">
+            <span ng-bind="userDetail.fname"></span>
+        </div>
+    </div>
+
+</header>
+
+<script type="text/javascript">
+            $(function() {
+                var $menu = $('nav#menu'),
+                    $html = $('html, body');
+
+                $menu.mmenu({
+                    dragOpen: true
+                });
+
+                var $anchor = false;
+                $menu.find( 'li > a' ).on(
+                    'click',
+                    function( e )
+                    {
+                        $anchor = $(this);
+                    }
+                );
+
+                var api = $menu.data( 'mmenu' );
+                api.bind( 'closed',
+                    function()
+                    {
+                        if ( $anchor )
+                        {
+                            var href = $anchor.attr( 'href' );
+                            $anchor = false;
+
+                            //  if the clicked link is linked to an anchor, scroll the page to that anchor 
+                            if ( href.slice( 0, 1 ) == '#' )
+                            {
+                                $html.animate({
+                                    scrollTop: $( href ).offset().top
+                                }); 
+                            }
+                        }
+                    }
+                );
+            });
+        </script>

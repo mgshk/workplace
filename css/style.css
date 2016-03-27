@@ -5,7 +5,7 @@
     color: #EFEFEF;
 }
 .login h3{text-align: center;font-weight: 600;}
-body{margin: 0;padding: 0;border: none;background: #f2f4f3 !important;font-family: 'Roboto Condensed', sans-serif !important;}
+body{margin: 0;padding: 0;border: none;background: #F2F4D1 !important;font-family: 'Roboto Condensed', sans-serif !important;}
 /* login */
 [role="login"] .container {
     margin-top: 100px
@@ -93,11 +93,9 @@ hr.line{border-top:1px solid #ddd !important;margin: 10px 0 10px 0 !important;}
     }
 .home ul{margin:0;padding: 0;list-style: none;text-align: center;}
 .home ul li{display: inline-block;margin: 10px 30px;cursor: pointer;vertical-align: top;}
-.home ul li img{display: block;-webkit-transition: all 0.7s ease;transition: all 0.7s ease;}
-.home ul li img:hover{-webkit-transform:scale(1.1);
-transform:scale(1.1);}
+.home ul li img{display: block;}
 .home ul li span{color: #888;font-size: 16px;text-transform: capitalize;}
-.userinfo{float: right;}
+.userinfo{float: right;width: 100%;text-align: right;}
 .userinfo span{color: #fff;font-size: 16px;margin-left: 10px;font-weight: 600;}
 .userinfo img{}
 .alert {
@@ -115,6 +113,37 @@ transform:scale(1.1);}
 .forgot:hover{color: #fff;}
 .pan{background: #0067aa !important;border-radius: 15px;}
 .pan1{border-radius: 15px !important;}
-.loginbtn{background: #f5a01b !important;}
-.emp-table tr th {background: #f5a01b;font-size: 15px;color: #fff;}
+.loginbtn{background: #f5a01b !important;border-color: #f5a01b !important;}
+.emp-table tr th {background: #0067aa;font-size: 15px;color: #fff;}
 .emp-table tbody{background: #fff;font-size: 15px;font-weight: 600;}
+.emp-table tr:nth-child(odd){background-color: #f2f2f2}
+.tab-content {
+    padding-top: 30px;
+}
+.profile{padding-left: 0px !important;}
+.profile img{width: 140px;height: 140px;}
+.cmts textarea{width: 100%;resize:none;width: 100%;
+    height: 104px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;}
+    form.form-horizontal.row-border.ng-pristine.ng-valid {
+        border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 2px;margin-bottom: 10px;border-top: none;
+}
+.edit-btn{text-align: right;}
+.form-control{background-color: #f9f9f9 !important;border-radius: 2px !important;}
+.nav > li > a{background: #0067aa;color: #fff;cursor: pointer;font-size: 16px;}
+.tab-content{background: #fff;padding: 0 !important;}
+.nav > li > a:hover{background: #fff !important;color: #333;}
+.nav > li.active > a{color: #333;}

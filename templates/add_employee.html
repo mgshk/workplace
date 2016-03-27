@@ -1,48 +1,129 @@
-<header>
+<div ng-include="'templates/header.html'"></div>
 
-    <div class="col-md-4 col-sm-6 col-xs-12 nospace">
-        <form>
-            <span class="menubar">
-                <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle menu" type="button" data-toggle="dropdown">
-                <i class="fa fa-bars"></i>
-                </button>
-                <ul class="dropdown-menu">
-                <li><a href="#">Personal Information</a></li>
-                <li><a href="#">Favorites</a></li>
-                <li><a href="#">My Team</a></li>
-                <li><a href="#">Dashboards</a></li>
-                </ul>
-                </div>
-            </span>
-        <input type="text" class="search" placeholder="Search">
-        </form>
-    </div>
-
-    <div class="col-md-4 col-sm-6 col-xs-12 logo">
-        <a ui-sref="/home">Logo</a>
-    </div>
-
-    <div class="col-md-4 col-sm-6 col-xs-12 nospace">
-        <div class="userinfo">
-            <img src="img/user.png" alt="User">
-            <span>Username</span>
-        </div>
-    </div>
-
-</header>
-
-<div class="container container-home">
+<div class="container">
 <div class="row">
     <div class="col-md-12 col-sm-12 col-xs-12">
-      <div class="panel panel-default">
-        <div class="panel-heading clearfix">
-          <i class="icon-calendar"></i>
-          <h3 class="panel-title"><strong>Add New Employee</strong></h3>
-        </div>
-       
-        <div class="panel-body">
-          <form class="form-horizontal row-border" action="#">
+   
+          <h3><strong>Add New Employee</strong></h3>
+
+          <div class="col-md-2 col-sm-2 col-xs-12 profile">
+           <img src="img/profile.jpg" alt="User">
+          </div>
+
+          <div class="col-md-10 col-sm-10 col-xs-12">
+
+              <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" data-target="#basic">Basic Details</a></li>
+                <li><a data-toggle="tab" data-target="#home">Personal Details</a></li>
+                <li><a data-toggle="tab" data-target="#menu1">Bank Details</a></li>
+                <li><a data-toggle="tab" data-target="#menu2">Passport Details</a></li>
+                <li><a data-toggle="tab" data-target="#menu3">Other Details</a></li>
+              </ul>
+
+              <div class="tab-content">
+
+            <div id="basic" class="tab-pane fade in active">
+                  
+            <form class="form-horizontal row-border">
+
+                      <div class="form-group">
+                        <div class="edit-btn col-md-12">
+                            <button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </div>
+                      </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Country</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Citizenship Status</label>
+                          <div class="col-md-9">
+                            <select class="form-control" name="role">
+                              <option value="">--Select--</option>
+                              <option value="System Enngineer">System Enngineer</option>
+                              <option value="Developer">Developer</option>
+                              <option value="Team Leader">Team Leader</option>
+                              <option value="Assistant Manager">Assistant Manager</option>
+                              <option value="Manager">Manager</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Possport No*</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Issue Date</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Expiry Date</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">State</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">City</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Authority</label>
+                          <div class="col-md-9">
+                            <input type="text" name="firstname" class="form-control">
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label">Comments</label>
+                          <div class="col-md-9 cmts">
+                            <textarea></textarea>
+                          </div>
+                        </div>
+
+                        <div class="form-group">
+                          <label class="col-md-3 control-label"></label>
+                          <div class="col-md-9">
+                            <button class="btn btn-primary loginbtn">Save</button>
+                          </div>
+                        </div>
+
+                      </form>
+                            </div>
+
+
+                <div id="home" class="tab-pane fade">
+                  
+        <form class="form-horizontal row-border">
+
+            <div class="form-group">
+                        <div class="edit-btn col-md-12">
+                            <button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </div>
+                      </div>
+
             <div class="form-group">
               <label class="col-md-3 control-label">Firstname</label>
               <div class="col-md-9">
@@ -128,14 +209,320 @@
               </div>
             </div>
 
-
             <div class="col-md-9 col-md-offset-3">
-            <button class="btn btn-primary loginbtn" ui-sref="/view_employees">Register</button>
+            <button class="btn btn-primary loginbtn" ui-sref="/view_employees">Save</button>
             </div>
 
           </form>
-        </div>
-      </div>
+                </div>
+
+                <div id="menu1" class="tab-pane fade">
+                 
+          <form class="form-horizontal row-border">
+
+              <div class="form-group">
+                        <div class="edit-btn col-md-12">
+                            <button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </div>
+                      </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Mode</label>
+              <div class="col-md-9">
+                <select class="form-control" name="role">
+                  <option value="">--Select--</option>
+                  <option value="System Enngineer">System Enngineer</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Team Leader">Team Leader</option>
+                  <option value="Assistant Manager">Assistant Manager</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Type</label>
+              <div class="col-md-9">
+                <select class="form-control" name="role">
+                  <option value="">--Select--</option>
+                  <option value="System Enngineer">System Enngineer</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Team Leader">Team Leader</option>
+                  <option value="Assistant Manager">Assistant Manager</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Bank Name</label>
+              <div class="col-md-9">
+                <select class="form-control" name="role">
+                  <option value="">--Select--</option>
+                  <option value="System Enngineer">System Enngineer</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Team Leader">Team Leader</option>
+                  <option value="Assistant Manager">Assistant Manager</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Branch Name</label>
+              <div class="col-md-9">
+                <select class="form-control" name="role">
+                  <option value="">--Select--</option>
+                  <option value="System Enngineer">System Enngineer</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Team Leader">Team Leader</option>
+                  <option value="Assistant Manager">Assistant Manager</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+            </div>
+
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">IBAN No</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Account No</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="lastname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Effective From Date</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="empid">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Effective To Date</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="empid">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">In Favour of</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="doj">
+              </div>
+            </div>
+          
+            
+            
+            <div class="col-md-9 col-md-offset-3">
+            <button class="btn btn-primary loginbtn" ui-sref="/view_employees">Save</button>
+            </div>
+
+          </form>
+
+
+                </div>
+                <div id="menu2" class="tab-pane fade">
+                  
+            <form class="form-horizontal row-border">
+          
+          <div class="form-group">
+                        <div class="edit-btn col-md-12">
+                            <button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </div>
+                      </div>
+
+          <div class="form-group">
+              <label class="col-md-3 control-label">Country</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Citizenship Status</label>
+              <div class="col-md-9">
+                <select class="form-control" name="role">
+                  <option value="">--Select--</option>
+                  <option value="System Enngineer">System Enngineer</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Team Leader">Team Leader</option>
+                  <option value="Assistant Manager">Assistant Manager</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+            </div>
+
+<div class="form-group">
+              <label class="col-md-3 control-label">Possport No*</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+            
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Issue Date</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Expiry Date</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">State</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">City</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Authority</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-md-3 control-label">Comments</label>
+              <div class="col-md-9 cmts">
+                <textarea></textarea>
+              </div>
+            </div>
+
+            <div class="col-md-9 col-md-offset-3">
+            <button class="btn btn-primary loginbtn" ui-sref="/view_employees">Save</button>
+            </div>
+
+          </form>
+
+                </div>
+
+                <div id="menu3" class="tab-pane fade">
+                 
+        <form class="form-horizontal row-border">
+
+          <div class="form-group">
+                        <div class="edit-btn col-md-12">
+                            <button class="btn btn-success"><span class="glyphicon glyphicon-pencil"></span></button>
+                        </div>
+                      </div>
+                      
+            <div class="form-group">
+              <label class="col-md-3 control-label">Firstname</label>
+              <div class="col-md-9">
+                <input type="text" name="firstname" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Lastname</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="lastname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Employee ID</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="empid">
+              </div>
+            </div>
+            
+            <div class="form-group">
+              <label class="col-md-3 control-label">Date of Joining</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="doj">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Total Years of Experience</label>
+              <div class="col-md-9">
+                <input type="text" name="experience" class="form-control">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Role</label>
+              <div class="col-md-9">
+                <select class="form-control" name="role">
+                  <option value="">--Select--</option>
+                  <option value="System Enngineer">System Enngineer</option>
+                  <option value="Developer">Developer</option>
+                  <option value="Team Leader">Team Leader</option>
+                  <option value="Assistant Manager">Assistant Manager</option>
+                  <option value="Manager">Manager</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Personal Email</label>
+              <div class="col-md-9">
+                <input class="form-control" type="email" name="pemail">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Official Email</label>
+              <div class="col-md-9">
+                <input class="form-control" type="email" name="oemail">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Mobile No</label>
+              <div class="col-md-9">
+                <input class="form-control" type="number" name="mobile">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Gender</label>
+              <div class="col-md-9">
+                 <label class="radio-inline">
+                  <input type="radio" name="gender" id="gender" value="Male"> Male
+                </label>
+                <label class="radio-inline">
+                  <input type="radio" name="gender" id="gender" value="Female"> Female
+                </label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-md-3 control-label">Qualification</label>
+              <div class="col-md-9">
+                <input class="form-control" type="text" name="qualification">
+              </div>
+            </div>
+
+            <div class="col-md-9 col-md-offset-3">
+            <button class="btn btn-primary loginbtn" ui-sref="/view_employees">Save</button>
+            </div>
+
+
+          </form>
+
+                </div>
+              </div>
+
+          </div>
+
     </div>
   </div>
   </div>
+
+
